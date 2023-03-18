@@ -18,7 +18,7 @@ h1 {
   margin-bottom: 20px;
 }
 
-.g-button {
+#g-button {
   display: inline-block;
   padding: 10px;
   background-color: #6c5ce7;
@@ -31,12 +31,12 @@ h1 {
   margin-bottom: 20px;
 }
 
-.g-button:hover {
+#g-button:hover {
   background-color: #8863f2;
   cursor: pointer;
 }
 
-.user-container {
+#user-container {
   width: 400px;
   margin: 0 auto;
   background-color: #fff;
