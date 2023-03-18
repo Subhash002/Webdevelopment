@@ -1,0 +1,45 @@
+body {
+  font-family: sans-serif;
+  line-height: 1.5;
+  background-color: #f2f2f2;
+  margin: 0;
+  padding: 0;
+}
+
+section {
+  margin: 40px 0;
+  text-align: center;
+}
+
+h1 {
+  font-size: 2em;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.g-button {
+  display: inline-block;
+  padding: 10px;
+  background-color: #6c5ce7;
+  color: #fff;
+  border-radius: 5px;
+  border: none;
+  font-size: 1.2em;
+  font-weight: bold;
+  transition: all 0.2s ease;
+  margin-bottom: 20px;
+}
+
+.g-button:hover {
+  background-color: #8863f2;
+  cursor: pointer;
+}
+
+.user-container {
+  width: 400px;
+  margin: 0 auto;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+}
