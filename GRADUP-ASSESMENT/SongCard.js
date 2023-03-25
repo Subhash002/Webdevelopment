@@ -13,7 +13,7 @@ const SongCard = ({value}) => {
       <div className="details">
         <div className="song-title">{title}</div>
         <div className="artist">{artist}</div>
-        <Rating {...rating} />
+        <Rating props={...rating} />
       </div>
     </div>
   );
