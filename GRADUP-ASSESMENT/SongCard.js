@@ -2,8 +2,8 @@ import React from "react";
 import { ReactPropTypes } from "react";
 import Rating from "./Rating";
 
-const SongCard = (props) => {
-  const { thumb, title, artist, rating } = props.data;
+const SongCard = ({value}) => {
+  const { thumb, title, artist, rating } = value.data;
 
   return (
     <div className="song-card">
