@@ -39,7 +39,7 @@ class App extends Component {
           Sort By Rating
         </button>
         <div id="song-list">
-          <SongCard {...this.state.songs} />
+          <SongCard value={...this.state.songs} />
         </div>
       </div>
     );
