@@ -1,5 +1,6 @@
 import React from "react";
-import { ReactPropTypes } from "react";
+import PropTypes from "prop-types";
+
 import Rating from "./Rating";
 
 const SongCard = (props) => {
@@ -16,13 +17,13 @@ const SongCard = (props) => {
   );
 };
 
-// SongCard.prototype = {
-//   data: ReactPropTypes.shape({
-//     thumb: PropTypes.string.isRequired,
-//     title: PropTypes.string.isRequired,
-//     artist: PropTypes.string.isRequired,
-//     rating: PropTypes.number.isRequired,
-//   }),
-// };
+SongCard.propTypes = {
+  data: PropTypes.shape({
+    thumb: PropTypes.string.isRequired,
+    title: PropTypes.string.isRequired,
+    artist: PropTypes.string.isRequired,
+    rating: PropTypes.number.isRequired,
+  }),
+};
 
 export default SongCard;
