@@ -1,8 +1,7 @@
 import React, { Component } from "react";
-import songs from "./assets/Song";
-
-import SongCard from "./SongCard";
-
+import SongCard from "./Components/SongCard";
+import songs from "./services/songs";
+//import can differ
 class App extends Component {
   constructor(props) {
     super(props);
@@ -11,7 +10,6 @@ class App extends Component {
       songs,
     };
   }
-
   sortByRating = () => {
     this.setState({
       songs: [...this.state.songs.sort((a, b) => b.rating - a.rating)],
@@ -27,7 +25,6 @@ class App extends Component {
       ],
     });
   };
-
   render() {
     return (
       <div id="super-tunes">
@@ -38,9 +35,10 @@ class App extends Component {
         <button className="st-btn" onClick={this.sortByRating} type="button">
           Sort By Rating
         </button>
-        <div id="song-list">
-          <SongCard value={...this.state.songs} />
-        </div>
+
+        {this.state.songs.map((song) => {
+          return <SongCard data={song} />;
+        })}
       </div>
     );
   }
