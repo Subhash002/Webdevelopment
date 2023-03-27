@@ -1,5 +1,4 @@
 import React from "react";
-
 const Rating = (props) => {
   const stars = props.stars;
   return (
