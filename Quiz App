@@ -1,0 +1,198 @@
+This is index.html
+// From here 
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Quiz Pop</title>
+  </head>
+  <body>
+    <div class="categories">
+      <h1>Select Quiz category</h1>
+      <button class="cat-btn">1. Coding</button>
+      <button class="cat-btn">2. Music</button>
+      <button class="cat-btn">3. Modern Art</button>
+    </div>
+    <div class="app hide">
+      <h1>Simple Quiz - Music</h1>
+      <div class="quiz">
+        <h2 id="question">1. Question Will be displayed here</h2>
+        <div class="answer-buttons">
+          <button class="btn">Answer 1</button>
+          <button class="btn">Answer 1</button>
+          <button class="btn">Answer 1</button>
+          <button class="btn">Answer 1</button>
+        </div>
+        <div class="prev-next">
+          <button id="prev">Prev</button>
+          <button id="next">Next</button>
+        </div>
+      </div>
+    </div>
+    <!--  -->
+    <script src="js/index.js"></script>
+  </body>
+</html>
+<!--  -->
+
+// Till here
+
+
+
+
+This is index.js
+// From here 
+import { questions } from "../data/dataset.js";
+
+const app = document.querySelector(".app");
+const catBtns = document.querySelectorAll(".cat-btn");
+const categoriesClass = document.getElementsByClassName("categories");
+let selectedCategory;
+catBtns.forEach((catBtn) => {
+  catBtn.addEventListener("click", () => {
+    selectedCategory = catBtn.textContent;
+    categoriesClass.classList.remove("hide");
+    app.classList.add("hide");
+  });
+});
+console.log(selectedCategory);
+
+// Till here
+
+
+This is style.css
+// From here 
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap');
+
+* {
+  font-family: 'Open Sans', sans-serif;
+}
+
+html,
+body {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: hsla(133, 87%, 4%, 0.97);
+}
+
+.app {
+  background-color: #fff;
+  width: 90%;
+  max-width: 600px;
+  margin: 100px auto 0;
+  border-radius: 10px;
+  padding: 30px;
+}
+
+.hide {
+  display: none;
+}
+
+.categories {
+  background-color: #fff;
+  width: 90%;
+  max-width: 600px;
+  margin: 100px auto 0;
+  border-radius: 10px;
+  padding: 30px;
+}
+
+.app h1 {
+  font-size: 25px;
+  color: #001e4d;
+  font-weight: 600;
+  border-bottom: 1px solid #333;
+  padding-bottom: 30px;
+}
+
+.quiz {
+  padding: 20px 0;
+}
+
+.quiz h2 {
+  font-size: 18px;
+  color: #001e4d;
+  font-weight: 600;
+}
+
+.btn {
+  background: #fff;
+  color: #222;
+  font-weight: 500;
+  width: 100%;
+  border: 1.5px solid #222;
+  padding: 13px;
+  padding-left: 30px;
+  margin: 10px 0;
+  text-align: left;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease-out;
+}
+
+.btn:hover {
+  background-color: #222;
+  color: #fff;
+
+}
+
+.cat-btn {
+  background: #fff;
+  color: #222;
+  font-weight: 500;
+  width: 100%;
+  border: 1.5px solid #222;
+  padding: 13px;
+  padding-left: 30px;
+  margin: 10px 0;
+  text-align: left;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease-out;
+}
+
+.cat-btn:hover {
+  background-color: #222;
+  color: #fff;
+
+}
+
+.prev-next {
+  display: flex;
+  justify-content: space-between;
+
+}
+
+#next {
+  background-color: #001e4d;
+  color: #fff;
+  font-weight: 500;
+  width: 150px;
+  border: 0;
+  padding: 10px;
+
+  border-radius: 5px;
+  cursor: pointer;
+  display: block;
+}
+
+#prev {
+  background-color: #001e4d;
+  color: #fff;
+  font-weight: 500;
+  width: 150px;
+  border: 0;
+  padding: 10px;
+
+  border-radius: 5px;
+  cursor: pointer;
+  display: block;
+}
+// Till here
